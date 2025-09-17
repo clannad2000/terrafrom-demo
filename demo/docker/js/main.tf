@@ -49,11 +49,11 @@
 #       每个自定义服务中包含大量配置，需要根据实际情况填写和确认
 #
 ########################## 3.1.1 ---------> pod ########################################################################
-module "abc" { #【固定值】 指定module名称
+module "k8s-zygk-ui" { #【固定值】 指定module名称
   #【固定值】指定组件入口位置
   source                  = "./modules/k8s/pod/"
   #【自定义值】指定中文名称
-  zh_name                 = ""
+  zh_name                 = "动态作业管控前端微服务"
   #【固定值】指定module类型
   module_type             = "microservice"
   #【固定值】指定层级
@@ -73,32 +73,32 @@ module "abc" { #【固定值】 指定module名称
   replicas                = 1
   #【自定义值-需确认】指定容器的端口
   containerPort           = [
-    {name = "http",port="8080"}
+    {name = "http",port="18080"}
   ]
   #【自定义值-需确认】指定pod最大的cpu资源
-  limitsCpu               = "2000m"
+  limitsCpu               = "250m"
   #【自定义值-需确认】指定pod最大的内存资源
-  limitsMemory            = "8000Mi"
+  limitsMemory            = "1000Mi"
   #【自定义值-需确认】指定pod默认请求的cpu资源
-  requestsCpu             = "1000m"
+  requestsCpu             = "250m"
   #【自定义值-需确认】指定pod默认请求的x内存资源
-  requestsMemory          = "2000Mi"
+  requestsMemory          = "1000Mi"
   #【自定义值】指定是否添加svc（创建为true，不创建为false 默认创建的svc的名字和服务的pod名一致）
   svc_enable              = true
   #【自定义值】指定svc类型（填写NodePort或ClusterIP，不创建则不填或保持默认）
-  svcType                 = "ClusterIP"
+  svcType                 = "NodePort"
   #【自定义值-需确认】指定pod的svc（svcPort为svc端口，svcTargetPort为目标端口，nodePort存在则填写不存在则nodePort = "",随机生成nodePort则填0）
   svc  = [
-    { name = "http",svcPort = "8080",svcTargetPort= "8080",nodePort = 0 }
+    { name = "http",svcPort = "18080",svcTargetPort= "18080",nodePort = 32025 }
   ]
   #【自定义值-需确认】指定svc的ip地址
   svc_clusterip           = ""
   #【自定义值-需确认】指定pod的host配置(如果没有则填'[]')
   hostAliases             = []
   #【自定义值】指定pod的元数据名称
-  metadataName            = "abc"
+  metadataName            = "zygk-ui"
   #【自定义值】指定pod的镜像名称
-  containerImage          = "hub.js.sgcc.com.cn/qiguanyu/abc:1.1.10"
+  containerImage          = "hub.js.sgcc.com.cn/shebeiyu/zygk-ui:1.1.1"
   #【自定义值】指定pod的命令
   #基于可观测平台监控的配置，如需修改请看以下注释
   #-DAPP_NAME: 为应用系统的唯一别名，可以从统一权限获取或自主定义，一串字符，唯一即可；
@@ -182,7 +182,7 @@ module "abc" { #【固定值】 指定module名称
   #例：如果不使用则删除上面例子，如果使用就删除下面的空示例
   volumes = []
   #【自定义值】指定是否添加ingress（创建为true，不创建为false，默认创建的ingress的名字和服务的pod名一致）
-  ingress_enable          = true
+  ingress_enable          = false
   #【自定义值】指定ingress的class名称，
   ingress_class_name      = ""
   #【自定义值】指定ingress的host名称
@@ -198,9 +198,7 @@ module "abc" { #【固定值】 指定module名称
     "nginx.ingress.kubernetes.io/proxy-body-size" = "50M"
   }
   #【自定义值】指定ingress的path情况，path指定跳转路径，serviceName指定svc的名称，servicePort指定端口，pathType
-  paths                   = [
-    { path ="/daxt-admin", serviceName ="abc", servicePort ="8080"}
-  ]
+  paths                   = []
   #【自定义值】指定ingress的tls协议
   ingress_tls = []
   #例：
@@ -208,7 +206,7 @@ module "abc" { #【固定值】 指定module名称
   #  { tls_hosts = ["abc.com.cn"], tls_secret_name = "abc.com.cn" }
   #]
   #【自定义值】指定是否创建configmap（创建为true，不创建为false，默认创建的configmap的名字和服务的pod名一致）
-  configmap_enable        = true
+  configmap_enable        = false
   #【自定义值】指定configmap的配置名称以及配置信息（规定配置信息导入到了yml文件里）
   #config_file             = [
   #  { key ="application.yml", file ="abc-application.yml"},
@@ -241,11 +239,7 @@ module "abc" { #【固定值】 指定module名称
   #【自定义值】指定pod的环境变量（env_name为环境变量的名称，type为环境变量内的类型，secret_name为secret的名称，secret_key为需要获取的变量）
   #不需要env为下面这种写法
   #例：当env_type为valueFrom时,valueForm的type为secretKeyRef、filedRef时  不使用env是env =[]
-  env = [
-    { env_type = "valueForm", name = "POD_IP", valueForm_type = "fieldRef", field_path = "status.podIP" },
-    { env_type = "valueForm", name = "SECRET_USER", valueForm_type = "secretKeyRef", secret_name = "my-secret", secret_key = "username" },
-    { env_type = "valueForm", name = "CFG_MODE", valueForm_type = "configMapKeyRef", configmap_name = "my-config", configmap_key = "mode" }
-  ]
+  env = []
   #例，可以写在一起，只能存在一个env
   #env = [
   #  { env_type = "env", name = "ENV_NORMAL", value = "abc" },
