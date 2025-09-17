@@ -3,7 +3,7 @@ module "zygk-ui" { #【固定值】 指定module名称
   #【固定值】指定组件入口位置
   source                  = "./modules/k8s/pod/"
   #【自定义值】指定中文名称
-  zh_name                 = "管理平台服务"
+  zh_name                 = "动态作业管控前端微服务"
   #【固定值】指定module类型
   module_type             = "microservice"
   #【固定值】指定层级
@@ -36,10 +36,10 @@ module "zygk-ui" { #【固定值】 指定module名称
   #【自定义值】指定是否添加svc（创建为true，不创建为false 默认创建的svc的名字和服务的pod名一致）
   svc_enable              = true
   #【自定义值】指定svc类型（填写NodePort或ClusterIP，不创建则不填或保持默认）
-  svcType                 = "ClusterIP"
+  svcType                 = "NodePort"
   #【自定义值-需确认】指定pod的svc（svcPort为svc端口，svcTargetPort为目标端口，nodePort存在则填写不存在则nodePort = "",随机生成nodePort则填0）
   svc  = [
-    { name = "port",svcPort = "18080",svcTargetPort= "18080",nodePort = "" }
+    { name = "port",svcPort = "18080",svcTargetPort= "18080",nodePort = "32025" }
   ]
   #【自定义值-需确认】指定svc的ip地址
   svc_clusterip           = ""
@@ -101,7 +101,7 @@ module "zygk-ui" { #【固定值】 指定module名称
     "-c"
   ]
   #【自定义值】指定初始化容器镜像
-  init_containerImage     = "zygk-ui/edf:1.1.1"
+  init_containerImage     = "abc/edf:1.1.1"
   #【自定义值】指定初始化容器名称
   init_name               = "agent"
   #【自定义值】指定初始化容器挂载（）
@@ -151,11 +151,11 @@ module "zygk-ui" { #【固定值】 指定module名称
 
 
 ########################## 3.1.1 ---------> zygk-ui pod ########################################################################
-module "zygk-ui" { #【固定值】 指定module名称
+module "zygk-basic-management" { #【固定值】 指定module名称
   #【固定值】指定组件入口位置
   source                  = "./modules/k8s/pod/"
   #【自定义值】指定中文名称
-  zh_name                 = "管理平台服务"
+  zh_name                 = "动态作业管控后端微服务"
   #【固定值】指定module类型
   module_type             = "microservice"
   #【固定值】指定层级
@@ -175,32 +175,32 @@ module "zygk-ui" { #【固定值】 指定module名称
   replicas                = 2
   #【自定义值-需确认】指定容器的端口
   containerPort           = [
-    {name = "port",port="18080"}
+    {name = "port",port="19510"}
   ]
   #【自定义值-需确认】指定pod最大的cpu资源
   limitsCpu               = "250m"
   #【自定义值-需确认】指定pod最大的内存资源
   limitsMemory            = "1000Mi"
   #【自定义值-需确认】指定pod默认请求的cpu资源
-  requestsCpu             = "250m"
+  requestsCpu             = "500m"
   #【自定义值-需确认】指定pod默认请求的x内存资源
-  requestsMemory          = "1000Mi"
+  requestsMemory          = "2000Mi"
   #【自定义值】指定是否添加svc（创建为true，不创建为false 默认创建的svc的名字和服务的pod名一致）
   svc_enable              = true
   #【自定义值】指定svc类型（填写NodePort或ClusterIP，不创建则不填或保持默认）
   svcType                 = "ClusterIP"
   #【自定义值-需确认】指定pod的svc（svcPort为svc端口，svcTargetPort为目标端口，nodePort存在则填写不存在则nodePort = "",随机生成nodePort则填0）
   svc  = [
-    { name = "port",svcPort = "18080",svcTargetPort= "18080",nodePort = "" }
+    { name = "port",svcPort = "19510",svcTargetPort= "19510",nodePort = "" }
   ]
   #【自定义值-需确认】指定svc的ip地址
   svc_clusterip           = ""
   #【自定义值-需确认】指定pod的host配置(如果没有则填'[]')
   hostAliases             = []
   #【自定义值】指定pod的元数据名称
-  metadataName            = "zygk-ui"
+  metadataName            = "zygk-basic-management"
   #【自定义值】指定pod的镜像名称
-  containerImage          = "hub.js.sgcc.com.cn/shebeiyu/zygk-ui:1.1.1"
+  containerImage          = "hub.js.sgcc.com.cn/shebeiyu/zygk-basic-management:1.1.1"
   #【自定义值】指定pod的命令
   containerCommand        = []
   #【自定义值】指定pod的参数
@@ -253,7 +253,7 @@ module "zygk-ui" { #【固定值】 指定module名称
     "-c"
   ]
   #【自定义值】指定初始化容器镜像
-  init_containerImage     = "zygk-ui/edf:1.1.1"
+  init_containerImage     = "abc/edf:1.1.1"
   #【自定义值】指定初始化容器名称
   init_name               = "agent"
   #【自定义值】指定初始化容器挂载（）
@@ -303,11 +303,11 @@ module "zygk-ui" { #【固定值】 指定module名称
 
 
 ########################## 3.1.1 ---------> zygk-ui pod ########################################################################
-module "zygk-ui" { #【固定值】 指定module名称
+module "zygk-external-system" { #【固定值】 指定module名称
   #【固定值】指定组件入口位置
   source                  = "./modules/k8s/pod/"
   #【自定义值】指定中文名称
-  zh_name                 = "管理平台服务"
+  zh_name                 = "外部系统对接微服务"
   #【固定值】指定module类型
   module_type             = "microservice"
   #【固定值】指定层级
@@ -327,32 +327,32 @@ module "zygk-ui" { #【固定值】 指定module名称
   replicas                = 2
   #【自定义值-需确认】指定容器的端口
   containerPort           = [
-    {name = "port",port="18080"}
+    {name = "port",port="19530"}
   ]
   #【自定义值-需确认】指定pod最大的cpu资源
   limitsCpu               = "250m"
   #【自定义值-需确认】指定pod最大的内存资源
   limitsMemory            = "1000Mi"
   #【自定义值-需确认】指定pod默认请求的cpu资源
-  requestsCpu             = "250m"
+  requestsCpu             = "500m"
   #【自定义值-需确认】指定pod默认请求的x内存资源
-  requestsMemory          = "1000Mi"
+  requestsMemory          = "2000Mi"
   #【自定义值】指定是否添加svc（创建为true，不创建为false 默认创建的svc的名字和服务的pod名一致）
   svc_enable              = true
   #【自定义值】指定svc类型（填写NodePort或ClusterIP，不创建则不填或保持默认）
   svcType                 = "ClusterIP"
   #【自定义值-需确认】指定pod的svc（svcPort为svc端口，svcTargetPort为目标端口，nodePort存在则填写不存在则nodePort = "",随机生成nodePort则填0）
   svc  = [
-    { name = "port",svcPort = "18080",svcTargetPort= "18080",nodePort = "" }
+    { name = "port",svcPort = "19530",svcTargetPort= "19530",nodePort = "" }
   ]
   #【自定义值-需确认】指定svc的ip地址
   svc_clusterip           = ""
   #【自定义值-需确认】指定pod的host配置(如果没有则填'[]')
   hostAliases             = []
   #【自定义值】指定pod的元数据名称
-  metadataName            = "zygk-ui"
+  metadataName            = "zygk-external-system"
   #【自定义值】指定pod的镜像名称
-  containerImage          = "hub.js.sgcc.com.cn/shebeiyu/zygk-ui:1.1.1"
+  containerImage          = "hub.js.sgcc.com.cn/shebeiyu/zygk-external-system:1.1.1"
   #【自定义值】指定pod的命令
   containerCommand        = []
   #【自定义值】指定pod的参数
@@ -405,7 +405,7 @@ module "zygk-ui" { #【固定值】 指定module名称
     "-c"
   ]
   #【自定义值】指定初始化容器镜像
-  init_containerImage     = "zygk-ui/edf:1.1.1"
+  init_containerImage     = "abc/edf:1.1.1"
   #【自定义值】指定初始化容器名称
   init_name               = "agent"
   #【自定义值】指定初始化容器挂载（）
