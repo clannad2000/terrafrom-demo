@@ -1,0 +1,1 @@
+import{ad as e,a0 as a,ai as s}from"./index-OtYEJMgP.js";const n=e("electronicFenceStore",(()=>{const e=a({type:null,value:{}});return{fenceParams:e,setFenceParams:a=>{Object.assign(e,a)}}})),t=()=>n(s);export{t as u};

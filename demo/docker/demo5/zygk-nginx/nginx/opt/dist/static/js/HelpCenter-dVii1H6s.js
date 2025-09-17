@@ -1,0 +1,1 @@
+import{a3 as e}from"./index-OtYEJMgP.js";function r(r){return e.get({url:"/helpCenter/fileInfoList",params:r})}const i=r=>e.get({url:`/file/info/media/preview/${r.fileId}`,params:r,responseType:"blob"},{isDownload:!0});export{i as d,r as g};

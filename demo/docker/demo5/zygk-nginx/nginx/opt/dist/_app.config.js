@@ -1,0 +1,1 @@
+window.__PRODUCTION__ZYGK__CONF__={"VITE_GLOB_APP_SHORT_NAME":"zygk","VITE_GLOB_API_URL":"","VITE_GLOB_API_URL_PREFIX":"/js-zygk-admin"};Object.freeze(window.__PRODUCTION__ZYGK__CONF__);Object.defineProperty(window,"__PRODUCTION__ZYGK__CONF__",{configurable:false,writable:false,});
