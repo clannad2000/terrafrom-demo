@@ -89,7 +89,7 @@ module "k8s-zygk-ui" { #【固定值】 指定module名称
   svcType                 = "NodePort"
   #【自定义值-需确认】指定pod的svc（svcPort为svc端口，svcTargetPort为目标端口，nodePort存在则填写不存在则nodePort = "",随机生成nodePort则填0）
   svc  = [
-    { name = "http",svcPort = "18080",svcTargetPort= "18080",nodePort = 32025 }
+    { name = "http",svcPort = "18080",svcTargetPort= "18080",nodePort = "32025" }
   ]
   #【自定义值-需确认】指定svc的ip地址
   svc_clusterip           = ""
