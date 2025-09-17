@@ -574,9 +574,9 @@ module "k8s-zygk-external-system" { #【固定值】 指定module名称
   #【自定义值-需确认】指定pod最大的内存资源
   limitsMemory            = "1000Mi"
   #【自定义值-需确认】指定pod默认请求的cpu资源
-  requestsCpu             = "250m"
+  requestsCpu             = "500m"
   #【自定义值-需确认】指定pod默认请求的x内存资源
-  requestsMemory          = "1000Mi"
+  requestsMemory          = "2000Mi"
   #【自定义值】指定是否添加svc（创建为true，不创建为false 默认创建的svc的名字和服务的pod名一致）
   svc_enable              = true
   #【自定义值】指定svc类型（填写NodePort或ClusterIP，不创建则不填或保持默认）
