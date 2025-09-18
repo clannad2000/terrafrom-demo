@@ -112,8 +112,6 @@ module "zygk-ui" { #【固定值】 指定module名称
   volumes = []
   #【自定义值】指定是否添加ingress（创建为true，不创建为false，默认创建的ingress的名字和服务的pod名一致）
   ingress_enable          = false
-  #【自定义值】指定ingress的class名称，
-  ingress_class_name      = ""
   #【自定义值】指定ingress的host名称
   hostname                = ""
   #【自定义值】指定ingress的配置
@@ -268,8 +266,6 @@ module "zygk-basic-management" { #【固定值】 指定module名称
   volumes = []
   #【自定义值】指定是否添加ingress（创建为true，不创建为false，默认创建的ingress的名字和服务的pod名一致）
   ingress_enable          = false
-  #【自定义值】指定ingress的class名称，
-  ingress_class_name      = ""
   #【自定义值】指定ingress的host名称
   hostname                = ""
   #【自定义值】指定ingress的配置
@@ -425,8 +421,6 @@ module "zygk-external-system" { #【固定值】 指定module名称
   volumes = []
   #【自定义值】指定是否添加ingress（创建为true，不创建为false，默认创建的ingress的名字和服务的pod名一致）
   ingress_enable          = false
-  #【自定义值】指定ingress的class名称，
-  ingress_class_name      = ""
   #【自定义值】指定ingress的host名称
   hostname                = ""
   #【自定义值】指定ingress的配置
