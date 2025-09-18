@@ -112,20 +112,24 @@ module "zygk-ui" { #【固定值】 指定module名称
   volumes = []
   #【自定义值】指定是否添加ingress（创建为true，不创建为false，默认创建的ingress的名字和服务的pod名一致）
   ingress_enable          = false
+  #【自定义值】指定ingress的class名称，
+  ingress_class_name      = ""
   #【自定义值】指定ingress的host名称
-	rule = []
-
+  hostname                = ""
   #【自定义值】指定ingress的配置
   annotations             = {
-    "kubernetes.io/ingress.class" = "ggfw-ingress"
+    "kubernetes.io/ingress.class" = "jiangning3-ingress"
     "nginx.ingress.kubernetes.io/affinity" = "cookie"
     "nginx.ingress.kubernetes.io/session-cookie-hash" = "sha1"
     "nginx.ingress.kubernetes.io/session-cookie-name" = "INGRESSCOOKIE"
     "nginx.ingress.kubernetes.io/ssl-redirect" = "false"
     "nginx.ingress.kubernetes.io/upstream-hash-by" = "sticky"
-    "nginx.ingress.kubernetes.io/proxy-body-size" = "500M"
+    "nginx.ingress.kubernetes.io/proxy-body-size" = "50M"
   }
-
+  #【自定义值】指定ingress的path情况，path指定跳转路径，serviceName指定svc的名称，servicePort指定端口，pathType
+  paths                   = []
+  #【自定义值】指定ingress的tls协议
+  ingress_tls = []
   #【自定义值】指定是否创建configmap（创建为true，不创建为false，默认创建的configmap的名字和服务的pod名一致）
   configmap_enable        = false
   config_file = []
@@ -264,19 +268,24 @@ module "zygk-basic-management" { #【固定值】 指定module名称
   volumes = []
   #【自定义值】指定是否添加ingress（创建为true，不创建为false，默认创建的ingress的名字和服务的pod名一致）
   ingress_enable          = false
+  #【自定义值】指定ingress的class名称，
+  ingress_class_name      = ""
   #【自定义值】指定ingress的host名称
-  rule = []
-
+  hostname                = ""
   #【自定义值】指定ingress的配置
   annotations             = {
-    "kubernetes.io/ingress.class" = "ggfw-ingress"
+    "kubernetes.io/ingress.class" = "jiangning3-ingress"
     "nginx.ingress.kubernetes.io/affinity" = "cookie"
     "nginx.ingress.kubernetes.io/session-cookie-hash" = "sha1"
     "nginx.ingress.kubernetes.io/session-cookie-name" = "INGRESSCOOKIE"
     "nginx.ingress.kubernetes.io/ssl-redirect" = "false"
     "nginx.ingress.kubernetes.io/upstream-hash-by" = "sticky"
-    "nginx.ingress.kubernetes.io/proxy-body-size" = "500M"
+    "nginx.ingress.kubernetes.io/proxy-body-size" = "50M"
   }
+  #【自定义值】指定ingress的path情况，path指定跳转路径，serviceName指定svc的名称，servicePort指定端口，pathType
+  paths                   = []
+  #【自定义值】指定ingress的tls协议
+  ingress_tls = []
 
   #【自定义值】指定是否创建configmap（创建为true，不创建为false，默认创建的configmap的名字和服务的pod名一致）
   configmap_enable        = false
@@ -416,19 +425,24 @@ module "zygk-external-system" { #【固定值】 指定module名称
   volumes = []
   #【自定义值】指定是否添加ingress（创建为true，不创建为false，默认创建的ingress的名字和服务的pod名一致）
   ingress_enable          = false
+  #【自定义值】指定ingress的class名称，
+  ingress_class_name      = ""
   #【自定义值】指定ingress的host名称
-  rule = []
-
+  hostname                = ""
   #【自定义值】指定ingress的配置
   annotations             = {
-    "kubernetes.io/ingress.class" = "ggfw-ingress"
+    "kubernetes.io/ingress.class" = "jiangning3-ingress"
     "nginx.ingress.kubernetes.io/affinity" = "cookie"
     "nginx.ingress.kubernetes.io/session-cookie-hash" = "sha1"
     "nginx.ingress.kubernetes.io/session-cookie-name" = "INGRESSCOOKIE"
     "nginx.ingress.kubernetes.io/ssl-redirect" = "false"
     "nginx.ingress.kubernetes.io/upstream-hash-by" = "sticky"
-    "nginx.ingress.kubernetes.io/proxy-body-size" = "500M"
+    "nginx.ingress.kubernetes.io/proxy-body-size" = "50M"
   }
+  #【自定义值】指定ingress的path情况，path指定跳转路径，serviceName指定svc的名称，servicePort指定端口，pathType
+  paths                   = []
+  #【自定义值】指定ingress的tls协议
+  ingress_tls = []
 
   #【自定义值】指定是否创建configmap（创建为true，不创建为false，默认创建的configmap的名字和服务的pod名一致）
   configmap_enable        = false
