@@ -1,0 +1,35 @@
+spring:
+  profiles:
+    active: dev
+    include: datasource,isc
+# 服务端口号
+server:
+  port: 19530
+  servlet:
+    context-path: /js-zygk-uaa
+# ##################### log 日志 ###################
+logging:
+  file:
+    name: log/uaa.log
+  level:
+    root: info
+
+token:
+  expires:
+    # token的有效期设置,单位:秒
+    in: 172800
+
+login:
+  # 登录模式，local：本地登录，传统的form表单登录；sso：统一权限认证
+  mode: local
+
+# sm4的key（不可改动，如需改动则需根据此秘钥重新生成用户密码）
+sm4:
+  key: ZMr7cXJLHWJtOiAc
+
+sm2:
+  backend:
+    # 前端用此公钥加密密码
+    public-key: 0410D0034F7AD69A8B4CC5D898DAAA0516A8F181427B19D00C76811E38F6DF65B714C1097E0C604864CE90269D94D59E8F71F57814ECE131AE9EC5509919678A2F
+    # 后端用此私钥解密
+    private-key: 00E369A50047C5FAAE0FE23E9179DA3E2A7AA1967BA96C6390797C0D3E792D61C3

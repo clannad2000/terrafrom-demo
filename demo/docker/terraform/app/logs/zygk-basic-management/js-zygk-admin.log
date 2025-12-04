@@ -1,0 +1,136 @@
+2025-11-28 07:19:18.308 [main] INFO  [AdminApplication:55] Starting AdminApplication using Java 1.8.0_342 on dc058130ac78 with PID 1 (/app/zygk-basic-management.jar started by root in /app)
+2025-11-28 07:19:18.312 [main] INFO  [AdminApplication:638] The following 3 profiles are active: "datasource", "isc", "dev"
+2025-11-28 07:19:20.897 [main] INFO  [TomcatWebServer:108] Tomcat initialized with port(s): 19510 (http)
+2025-11-28 07:19:20.913 [main] INFO  [StandardService:173] Starting service [Tomcat]
+2025-11-28 07:19:20.914 [main] INFO  [StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-11-28 07:19:21.014 [main] INFO  [[/js-zygk-admin]:173] Initializing Spring embedded WebApplicationContext
+2025-11-28 07:19:21.015 [main] INFO  [ServletWebServerApplicationContext:292] Root WebApplicationContext: initialization completed in 2636 ms
+2025-11-28 07:19:23.370 [main] INFO  [DefaultSecurityFilterChain:55] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@401f7633, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@31ff43be, org.springframework.security.web.context.SecurityContextPersistenceFilter@7d446ed1, org.springframework.security.web.header.HeaderWriterFilter@3697186, org.springframework.security.web.authentication.logout.LogoutFilter@c7ba306, com.hbnrtech.zygk.js.admin.web.filter.SsoTokenFilter@58e1d9d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@62010f5c, org.springframework.security.web.session.ConcurrentSessionFilter@481ba2cf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7e5c856f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1f53a5dc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5b6ec132, org.springframework.security.web.session.SessionManagementFilter@5b367418, org.springframework.security.web.access.ExceptionTranslationFilter@4671115f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@56673b2c]
+2025-11-28 07:19:23.381 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/verifyCode']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:19:23.382 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/verifyCode']
+2025-11-28 07:19:23.383 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:19:23.383 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/']
+2025-11-28 07:19:23.384 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/index.html']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:19:23.384 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/index.html']
+2025-11-28 07:19:23.384 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/assets/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:19:23.384 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/assets/**']
+2025-11-28 07:19:23.384 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/*.ico']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:19:23.385 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/*.ico']
+2025-11-28 07:19:23.385 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/*.js']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:19:23.385 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/*.js']
+2025-11-28 07:19:23.386 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/document/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:19:23.386 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/document/**']
+2025-11-28 07:19:23.386 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/static/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:19:23.386 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/static/**']
+2025-11-28 07:19:23.386 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/*.svg']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:19:23.386 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/*.svg']
+2025-11-28 07:19:23.386 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/*.json']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:19:23.387 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/*.json']
+2025-11-28 07:19:23.387 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/callback/nginx/auth']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:19:23.387 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/callback/nginx/auth']
+2025-11-28 07:19:23.440 [main] INFO  [ScheduleConfig:19] 创建定时任务调度线程池...
+2025-11-28 07:19:23.443 [main] INFO  [ScheduleConfig:25] 创建定时任务调度线程池完成
+2025-11-28 07:19:24.209 [main] INFO  [TomcatWebServer:220] Tomcat started on port(s): 19510 (http) with context path '/js-zygk-admin'
+2025-11-28 07:19:24.226 [main] INFO  [AdminApplication:61] Started AdminApplication in 6.658 seconds (JVM running for 7.311)
+2025-11-28 07:30:49.944 [main] INFO  [AdminApplication:55] Starting AdminApplication using Java 1.8.0_342 on 266b4205fdec with PID 1 (/app/zygk-basic-management.jar started by root in /app)
+2025-11-28 07:30:49.948 [main] INFO  [AdminApplication:638] The following 3 profiles are active: "datasource", "isc", "dev"
+2025-11-28 07:30:52.290 [main] INFO  [TomcatWebServer:108] Tomcat initialized with port(s): 19510 (http)
+2025-11-28 07:30:52.302 [main] INFO  [StandardService:173] Starting service [Tomcat]
+2025-11-28 07:30:52.302 [main] INFO  [StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-11-28 07:30:52.382 [main] INFO  [[/js-zygk-admin]:173] Initializing Spring embedded WebApplicationContext
+2025-11-28 07:30:52.383 [main] INFO  [ServletWebServerApplicationContext:292] Root WebApplicationContext: initialization completed in 2372 ms
+2025-11-28 07:30:54.306 [main] INFO  [DefaultSecurityFilterChain:55] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@401f7633, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@31ff43be, org.springframework.security.web.context.SecurityContextPersistenceFilter@7d446ed1, org.springframework.security.web.header.HeaderWriterFilter@3697186, org.springframework.security.web.authentication.logout.LogoutFilter@c7ba306, com.hbnrtech.zygk.js.admin.web.filter.SsoTokenFilter@58e1d9d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@62010f5c, org.springframework.security.web.session.ConcurrentSessionFilter@481ba2cf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7e5c856f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1f53a5dc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5b6ec132, org.springframework.security.web.session.SessionManagementFilter@5b367418, org.springframework.security.web.access.ExceptionTranslationFilter@4671115f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@56673b2c]
+2025-11-28 07:30:54.319 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/verifyCode']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:30:54.320 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/verifyCode']
+2025-11-28 07:30:54.321 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:30:54.321 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/']
+2025-11-28 07:30:54.322 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/index.html']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:30:54.322 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/index.html']
+2025-11-28 07:30:54.322 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/assets/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:30:54.322 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/assets/**']
+2025-11-28 07:30:54.323 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/*.ico']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:30:54.323 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/*.ico']
+2025-11-28 07:30:54.323 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/*.js']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:30:54.323 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/*.js']
+2025-11-28 07:30:54.323 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/document/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:30:54.323 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/document/**']
+2025-11-28 07:30:54.323 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/static/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:30:54.324 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/static/**']
+2025-11-28 07:30:54.324 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/*.svg']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:30:54.324 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/*.svg']
+2025-11-28 07:30:54.325 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/*.json']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:30:54.326 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/*.json']
+2025-11-28 07:30:54.326 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/callback/nginx/auth']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:30:54.326 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/callback/nginx/auth']
+2025-11-28 07:30:54.376 [main] INFO  [ScheduleConfig:19] 创建定时任务调度线程池...
+2025-11-28 07:30:54.378 [main] INFO  [ScheduleConfig:25] 创建定时任务调度线程池完成
+2025-11-28 07:30:55.077 [main] INFO  [TomcatWebServer:220] Tomcat started on port(s): 19510 (http) with context path '/js-zygk-admin'
+2025-11-28 07:30:55.096 [main] INFO  [AdminApplication:61] Started AdminApplication in 5.894 seconds (JVM running for 6.463)
+2025-11-28 07:34:08.489 [main] INFO  [AdminApplication:55] Starting AdminApplication using Java 1.8.0_342 on 770e7493a826 with PID 1 (/app/zygk-basic-management.jar started by root in /app)
+2025-11-28 07:34:08.493 [main] INFO  [AdminApplication:638] The following 3 profiles are active: "datasource", "isc", "dev"
+2025-11-28 07:34:11.013 [main] INFO  [TomcatWebServer:108] Tomcat initialized with port(s): 19510 (http)
+2025-11-28 07:34:11.029 [main] INFO  [StandardService:173] Starting service [Tomcat]
+2025-11-28 07:34:11.030 [main] INFO  [StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-11-28 07:34:11.118 [main] INFO  [[/js-zygk-admin]:173] Initializing Spring embedded WebApplicationContext
+2025-11-28 07:34:11.119 [main] INFO  [ServletWebServerApplicationContext:292] Root WebApplicationContext: initialization completed in 2549 ms
+2025-11-28 07:34:13.695 [main] INFO  [DefaultSecurityFilterChain:55] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@51fadaff, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@401f7633, org.springframework.security.web.context.SecurityContextPersistenceFilter@be68757, org.springframework.security.web.header.HeaderWriterFilter@36cda2c2, org.springframework.security.web.authentication.logout.LogoutFilter@39ac0c0a, com.hbnrtech.zygk.js.admin.web.filter.SsoTokenFilter@58e1d9d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@70f02c32, org.springframework.security.web.session.ConcurrentSessionFilter@36060e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@12d2ce03, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@413f69cc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31ff43be, org.springframework.security.web.session.SessionManagementFilter@1583741e, org.springframework.security.web.access.ExceptionTranslationFilter@36b4091c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@172b013]
+2025-11-28 07:34:13.708 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/verifyCode']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:34:13.709 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/verifyCode']
+2025-11-28 07:34:13.710 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:34:13.710 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/']
+2025-11-28 07:34:13.711 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/index.html']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:34:13.711 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/index.html']
+2025-11-28 07:34:13.711 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/assets/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:34:13.711 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/assets/**']
+2025-11-28 07:34:13.711 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/*.ico']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:34:13.711 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/*.ico']
+2025-11-28 07:34:13.711 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/*.js']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:34:13.711 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/*.js']
+2025-11-28 07:34:13.712 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/document/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:34:13.712 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/document/**']
+2025-11-28 07:34:13.712 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/static/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:34:13.712 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/static/**']
+2025-11-28 07:34:13.712 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/*.svg']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:34:13.712 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/*.svg']
+2025-11-28 07:34:13.712 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/*.json']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:34:13.712 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/*.json']
+2025-11-28 07:34:13.712 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/callback/nginx/auth']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:34:13.713 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/callback/nginx/auth']
+2025-11-28 07:34:13.760 [main] INFO  [ScheduleConfig:19] 创建定时任务调度线程池...
+2025-11-28 07:34:13.763 [main] INFO  [ScheduleConfig:25] 创建定时任务调度线程池完成
+2025-11-28 07:34:14.446 [main] INFO  [TomcatWebServer:220] Tomcat started on port(s): 19510 (http) with context path '/js-zygk-admin'
+2025-11-28 07:34:14.465 [main] INFO  [AdminApplication:61] Started AdminApplication in 6.77 seconds (JVM running for 7.362)
+2025-11-28 07:37:01.673 [main] INFO  [AdminApplication:55] Starting AdminApplication using Java 1.8.0_342 on 543aaa6cb1d5 with PID 1 (/app/zygk-basic-management.jar started by root in /app)
+2025-11-28 07:37:01.676 [main] INFO  [AdminApplication:638] The following 3 profiles are active: "datasource", "isc", "dev"
+2025-11-28 07:37:04.031 [main] INFO  [TomcatWebServer:108] Tomcat initialized with port(s): 19510 (http)
+2025-11-28 07:37:04.043 [main] INFO  [StandardService:173] Starting service [Tomcat]
+2025-11-28 07:37:04.043 [main] INFO  [StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-11-28 07:37:04.122 [main] INFO  [[/js-zygk-admin]:173] Initializing Spring embedded WebApplicationContext
+2025-11-28 07:37:04.122 [main] INFO  [ServletWebServerApplicationContext:292] Root WebApplicationContext: initialization completed in 2379 ms
+2025-11-28 07:37:06.014 [main] INFO  [DefaultSecurityFilterChain:55] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@51fadaff, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@401f7633, org.springframework.security.web.context.SecurityContextPersistenceFilter@be68757, org.springframework.security.web.header.HeaderWriterFilter@36cda2c2, org.springframework.security.web.authentication.logout.LogoutFilter@39ac0c0a, com.hbnrtech.zygk.js.admin.web.filter.SsoTokenFilter@58e1d9d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@70f02c32, org.springframework.security.web.session.ConcurrentSessionFilter@36060e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@12d2ce03, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@413f69cc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31ff43be, org.springframework.security.web.session.SessionManagementFilter@1583741e, org.springframework.security.web.access.ExceptionTranslationFilter@36b4091c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@172b013]
+2025-11-28 07:37:06.024 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/verifyCode']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:37:06.025 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/verifyCode']
+2025-11-28 07:37:06.026 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:37:06.026 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/']
+2025-11-28 07:37:06.026 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/index.html']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:37:06.026 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/index.html']
+2025-11-28 07:37:06.027 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/assets/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:37:06.027 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/assets/**']
+2025-11-28 07:37:06.027 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/*.ico']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:37:06.027 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/*.ico']
+2025-11-28 07:37:06.027 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/*.js']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:37:06.027 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/*.js']
+2025-11-28 07:37:06.027 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/document/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:37:06.027 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/document/**']
+2025-11-28 07:37:06.027 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/static/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:37:06.028 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/static/**']
+2025-11-28 07:37:06.028 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/*.svg']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:37:06.028 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/*.svg']
+2025-11-28 07:37:06.028 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/*.json']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:37:06.029 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/*.json']
+2025-11-28 07:37:06.029 [main] WARN  [WebSecurity:305] You are asking Spring Security to ignore Ant [pattern='/callback/nginx/auth']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2025-11-28 07:37:06.029 [main] INFO  [DefaultSecurityFilterChain:52] Will not secure Ant [pattern='/callback/nginx/auth']
+2025-11-28 07:37:06.080 [main] INFO  [ScheduleConfig:19] 创建定时任务调度线程池...
+2025-11-28 07:37:06.083 [main] INFO  [ScheduleConfig:25] 创建定时任务调度线程池完成
+2025-11-28 07:37:06.803 [main] INFO  [TomcatWebServer:220] Tomcat started on port(s): 19510 (http) with context path '/js-zygk-admin'
+2025-11-28 07:37:06.822 [main] INFO  [AdminApplication:61] Started AdminApplication in 5.881 seconds (JVM running for 6.465)

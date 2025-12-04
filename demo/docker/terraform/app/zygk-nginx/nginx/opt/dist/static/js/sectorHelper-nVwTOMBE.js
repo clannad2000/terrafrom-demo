@@ -1,0 +1,1 @@
+import{g as r,n,bM as a}from"./installCanvasRenderer-kp6nwiR2.js";function e(e,s,t){var u=e.get("borderRadius");if(null==u)return t?{cornerRadius:0}:null;r(u)||(u=[u,u,u,u]);var i=Math.abs(s.r||0-s.r0||0);return{cornerRadius:n(u,(function(r){return a(r,i)}))}}export{e as g};

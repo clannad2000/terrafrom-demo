@@ -1,0 +1,20 @@
+[
+  {
+    "project_name": "zygk-nginx",
+    "image_version": "0.0.4",
+    "external_port": 18089,
+    "internal_port": 18089
+  },
+  {
+    "project_name": "zygk-basic-management",
+    "image_version": "0.0.7",
+    "external_port": 19510,
+    "internal_port": 19510
+  },
+  {
+    "project_name": "zygk-external-system",
+    "image_version": "0.0.6",
+    "external_port": 19530,
+    "internal_port": 19530
+  }
+]

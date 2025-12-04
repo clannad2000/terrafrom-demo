@@ -1,0 +1,1 @@
+const n=""+new URL("../png/insRanking_3-WuJv_aE4.png",import.meta.url).href,a=""+new URL("../png/insRanking_4-_J9VmBEA.png",import.meta.url).href,e=""+new URL("../png/insRanking_5-UaBlZIx5.png",import.meta.url).href;export{n as _,a,e as b};

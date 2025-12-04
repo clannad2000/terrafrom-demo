@@ -1,0 +1,75 @@
+
+jdk：
+docker pull mcr.microsoft.com/openjdk/jdk:8-mariner
+docker pull mcr.microsoft.com/openjdk/jdk:21-ubuntu
+
+
+初始化
+terraform init
+
+格式化
+terraform fmt
+
+语法验证
+terraform validate
+
+
+检查当前状态
+terraform show
+
+应用
+terraform apply
+
+销毁资源
+terraform destroy
+
+
+
+监控服务注册：
+
+[Unit]
+Description=Watch configs.json and auto apply Terraform
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/zygk/terraform
+ExecStart=/home/zygk/terraform/watch_terraform.sh
+Restart=always
+RestartSec=10
+#StandardOutput=append:/home/zygk/terraform/logs/watch_terraform.log
+#StandardError=append:/home/zygk/terraform/logs/watch_terraform.log
+
+[Install]
+WantedBy=multi-user.target
+
+
+
+
+挂载：
+安装s3fs
+apt install s3fs
+
+生成凭证
+
+保存凭证
+
+echo "access_key:secret_key" > /etc/s3cred
+
+echo "o5DV9Co3JjDBoV978n8H:FJrggKAvz5ZH6UkRi3d9mUY85cJkHRkItfXfnOzg" > /etc/s3cred
+
+
+chmod 600 /etc/s3cred
+
+mkdir /s3
+
+挂载
+
+s3fs <bucket> /s3 -o passwd_file=/etc/s3cred,use_path_request_style,url=http://minio-server:9000
+s3fs server /home/zygk/terraform/app -o passwd_file=/etc/s3cred,use_path_request_style,url=http://127.0.0.1:9000
+打开历史版本功能.
+
+
+使用：
+替换对应的jar后，更新configs.json中对应应用的版本号. 后台会定时触发更新.

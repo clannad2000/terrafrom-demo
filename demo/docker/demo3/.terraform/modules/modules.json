@@ -1,1 +1,0 @@
-{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"nginx_app_v1","Source":"./modules/docker_instance","Dir":"modules/docker_instance"},{"Key":"nginx_app_v2","Source":"./modules/docker_instance","Dir":"modules/docker_instance"}]}

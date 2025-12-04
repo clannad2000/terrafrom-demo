@@ -1,0 +1,464 @@
+2025-11-28 07:31:13 - Watch script started. Initial hash: 19e446621c5a93d33bca21ddfda26290e02f679a72d96a0d176b9d2a6cb88e94
+2025-11-28 07:31:13 - Initial terraform apply...
+[0m[1mmodule.app["zygk-basic-management"].docker_image.app_image: Refreshing state... [id=sha256:716bf41f468cc51d2683819f234e5ebabf38839b31688351f878a177e5f30a38zygk-basic-management:0.0.7][0m
+[0m[1mmodule.app["zygk-nginx"].docker_image.app_image: Refreshing state... [id=sha256:96360f04937bd604cd8c97a971a948a21bfdab5b06f4a5d347d6df9ecced14b8zygk-nginx:0.0.4][0m
+[0m[1mmodule.app["zygk-external-system"].docker_image.app_image: Refreshing state... [id=sha256:103dc2a7d2c1bb3da0e6f5171ae2b57ed3cd02d36741a7adb2e028bebf48415dzygk-external-system:0.0.6][0m
+[0m[1mmodule.app["zygk-nginx"].docker_container.app_container: Refreshing state... [id=0996e580748168bb44967de2067205e951bf3f928d3742b77168bb2ba7dd2562][0m
+[0m[1mmodule.app["zygk-external-system"].docker_container.app_container: Refreshing state... [id=94e9f13eaa9bf20cf1c6aca0ced56ddd2a7fd4f76d820754372f7eb92d83808e][0m
+[0m[1mmodule.app["zygk-basic-management"].docker_container.app_container: Refreshing state... [id=266b4205fdec7b6f13fe1b5e284bcb381518608e4f53c66dd63d54b13f825b1b][0m
+
+[0m[1m[32mNo changes.[0m[1m Your infrastructure matches the configuration.[0m
+
+[0mTerraform has compared your real infrastructure against your configuration
+and found no differences, so no changes are needed.
+[0m[1m[32m
+Apply complete! Resources: 0 added, 0 changed, 0 destroyed.[0m
+2025-11-28 07:31:15 - Initial terraform apply finished.
+2025-11-28 07:34:23 - ERROR: /home/zygk/terraform/configs.json 不存在
+2025-11-28 07:34:33 - ERROR: /home/zygk/terraform/configs.json 不存在
+2025-11-28 07:34:44 - ERROR: /home/zygk/terraform/configs.json 不存在
+2025-11-28 07:34:54 - ERROR: /home/zygk/terraform/configs.json 不存在
+2025-11-28 07:35:04 - ERROR: /home/zygk/terraform/configs.json 不存在
+2025-11-28 07:35:14 - ERROR: /home/zygk/terraform/configs.json 不存在
+2025-11-28 07:35:25 - ERROR: /home/zygk/terraform/configs.json 不存在
+2025-11-28 07:35:31 - Watch script started. Initial hash: 4394741ac62476043404e25c5917a200f59bb94f78ef5375038d6a6de8d1d48b
+2025-11-28 07:35:31 - Initial terraform apply...
+[0m[1mmodule.app["zygk-external-system"].docker_image.app_image: Refreshing state... [id=sha256:103dc2a7d2c1bb3da0e6f5171ae2b57ed3cd02d36741a7adb2e028bebf48415dzygk-external-system:0.0.6][0m
+[0m[1mmodule.app["zygk-nginx"].docker_image.app_image: Refreshing state... [id=sha256:96360f04937bd604cd8c97a971a948a21bfdab5b06f4a5d347d6df9ecced14b8zygk-nginx:0.0.4][0m
+[0m[1mmodule.app["zygk-basic-management"].docker_image.app_image: Refreshing state... [id=sha256:716bf41f468cc51d2683819f234e5ebabf38839b31688351f878a177e5f30a38zygk-basic-management:0.0.7][0m
+[0m[1mmodule.app["zygk-external-system"].docker_container.app_container: Refreshing state... [id=75d2492aaad1ed96514e341d7a3b9ccfcb81776bd160e25ff498a5039ab5b3d5][0m
+[0m[1mmodule.app["zygk-basic-management"].docker_container.app_container: Refreshing state... [id=770e7493a82614fb07445df10ce3f73b0d4a3853b2571065f910cb7a7bd72c80][0m
+[0m[1mmodule.app["zygk-nginx"].docker_container.app_container: Refreshing state... [id=7b551255587661e4b353ca918b331042f257ac5c091998a734bd0d53655298d9][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [31m-[0m destroy[0m
+
+Terraform will perform the following actions:
+
+[1m  # module.app["zygk-basic-management"].docker_container.app_container[0m will be [1m[31mdestroyed[0m
+  # (because module.app["zygk-basic-management"] is not in configuration)
+[0m  [31m-[0m[0m resource "docker_container" "app_container" {
+      [31m-[0m[0m attach                                      = false [90m-> null[0m[0m
+      [31m-[0m[0m command                                     = [] [90m-> null[0m[0m
+      [31m-[0m[0m container_read_refresh_timeout_milliseconds = 15000 [90m-> null[0m[0m
+      [31m-[0m[0m cpu_shares                                  = 0 [90m-> null[0m[0m
+      [31m-[0m[0m dns                                         = [] [90m-> null[0m[0m
+      [31m-[0m[0m dns_opts                                    = [] [90m-> null[0m[0m
+      [31m-[0m[0m dns_search                                  = [] [90m-> null[0m[0m
+      [31m-[0m[0m entrypoint                                  = [
+          [31m-[0m[0m "java",
+          [31m-[0m[0m "-jar",
+          [31m-[0m[0m "zygk-basic-management.jar",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m env                                         = [] [90m-> null[0m[0m
+      [31m-[0m[0m group_add                                   = [] [90m-> null[0m[0m
+      [31m-[0m[0m hostname                                    = "770e7493a826" [90m-> null[0m[0m
+      [31m-[0m[0m id                                          = "770e7493a82614fb07445df10ce3f73b0d4a3853b2571065f910cb7a7bd72c80" [90m-> null[0m[0m
+      [31m-[0m[0m image                                       = "sha256:716bf41f468cc51d2683819f234e5ebabf38839b31688351f878a177e5f30a38" [90m-> null[0m[0m
+      [31m-[0m[0m init                                        = false [90m-> null[0m[0m
+      [31m-[0m[0m ipc_mode                                    = "private" [90m-> null[0m[0m
+      [31m-[0m[0m log_driver                                  = "json-file" [90m-> null[0m[0m
+      [31m-[0m[0m log_opts                                    = {} [90m-> null[0m[0m
+      [31m-[0m[0m logs                                        = false [90m-> null[0m[0m
+      [31m-[0m[0m max_retry_count                             = 0 [90m-> null[0m[0m
+      [31m-[0m[0m memory                                      = 0 [90m-> null[0m[0m
+      [31m-[0m[0m memory_swap                                 = 0 [90m-> null[0m[0m
+      [31m-[0m[0m must_run                                    = true [90m-> null[0m[0m
+      [31m-[0m[0m name                                        = "zygk-basic-management-0.0.7" [90m-> null[0m[0m
+      [31m-[0m[0m network_data                                = [
+          [31m-[0m[0m {
+              [31m-[0m[0m gateway                   = "172.17.0.1"
+              [31m-[0m[0m global_ipv6_prefix_length = 0
+              [31m-[0m[0m ip_address                = "172.17.0.4"
+              [31m-[0m[0m ip_prefix_length          = 16
+              [31m-[0m[0m mac_address               = "5a:60:64:c0:dc:94"
+              [31m-[0m[0m network_name              = "bridge"
+                [90m# (2 unchanged attributes hidden)[0m[0m
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m network_mode                                = "bridge" [90m-> null[0m[0m
+      [31m-[0m[0m privileged                                  = false [90m-> null[0m[0m
+      [31m-[0m[0m publish_all_ports                           = false [90m-> null[0m[0m
+      [31m-[0m[0m read_only                                   = false [90m-> null[0m[0m
+      [31m-[0m[0m remove_volumes                              = true [90m-> null[0m[0m
+      [31m-[0m[0m restart                                     = "always" [90m-> null[0m[0m
+      [31m-[0m[0m rm                                          = false [90m-> null[0m[0m
+      [31m-[0m[0m runtime                                     = "runc" [90m-> null[0m[0m
+      [31m-[0m[0m security_opts                               = [] [90m-> null[0m[0m
+      [31m-[0m[0m shm_size                                    = 64 [90m-> null[0m[0m
+      [31m-[0m[0m start                                       = true [90m-> null[0m[0m
+      [31m-[0m[0m stdin_open                                  = false [90m-> null[0m[0m
+      [31m-[0m[0m stop_timeout                                = 0 [90m-> null[0m[0m
+      [31m-[0m[0m storage_opts                                = {} [90m-> null[0m[0m
+      [31m-[0m[0m sysctls                                     = {} [90m-> null[0m[0m
+      [31m-[0m[0m tmpfs                                       = {} [90m-> null[0m[0m
+      [31m-[0m[0m tty                                         = false [90m-> null[0m[0m
+      [31m-[0m[0m wait                                        = false [90m-> null[0m[0m
+      [31m-[0m[0m wait_timeout                                = 60 [90m-> null[0m[0m
+      [31m-[0m[0m working_dir                                 = "/app" [90m-> null[0m[0m
+        [90m# (7 unchanged attributes hidden)[0m[0m
+
+      [31m-[0m[0m ports {
+          [31m-[0m[0m external = 19510 [90m-> null[0m[0m
+          [31m-[0m[0m internal = 19510 [90m-> null[0m[0m
+          [31m-[0m[0m ip       = "0.0.0.0" [90m-> null[0m[0m
+          [31m-[0m[0m protocol = "tcp" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m volumes {
+          [31m-[0m[0m container_path = "/app/logs" [90m-> null[0m[0m
+          [31m-[0m[0m host_path      = "/home/zygk/terraform/app/logs/zygk-basic-management" [90m-> null[0m[0m
+          [31m-[0m[0m read_only      = false [90m-> null[0m[0m
+            [90m# (2 unchanged attributes hidden)[0m[0m
+        }
+    }
+
+[1m  # module.app["zygk-basic-management"].docker_image.app_image[0m will be [1m[31mdestroyed[0m
+  # (because module.app["zygk-basic-management"] is not in configuration)
+[0m  [31m-[0m[0m resource "docker_image" "app_image" {
+      [31m-[0m[0m id           = "sha256:716bf41f468cc51d2683819f234e5ebabf38839b31688351f878a177e5f30a38zygk-basic-management:0.0.7" [90m-> null[0m[0m
+      [31m-[0m[0m image_id     = "sha256:716bf41f468cc51d2683819f234e5ebabf38839b31688351f878a177e5f30a38" [90m-> null[0m[0m
+      [31m-[0m[0m keep_locally = true [90m-> null[0m[0m
+      [31m-[0m[0m name         = "zygk-basic-management:0.0.7" [90m-> null[0m[0m
+      [31m-[0m[0m repo_digest  = "zygk-basic-management@sha256:716bf41f468cc51d2683819f234e5ebabf38839b31688351f878a177e5f30a38" [90m-> null[0m[0m
+      [31m-[0m[0m triggers     = {
+          [31m-[0m[0m "build_version" = "0.0.7"
+        } [90m-> null[0m[0m
+
+      [31m-[0m[0m build {
+          [31m-[0m[0m build_args      = {} [90m-> null[0m[0m
+          [31m-[0m[0m cache_from      = [] [90m-> null[0m[0m
+          [31m-[0m[0m context         = "./app/zygk-basic-management" [90m-> null[0m[0m
+          [31m-[0m[0m cpu_period      = 0 [90m-> null[0m[0m
+          [31m-[0m[0m cpu_quota       = 0 [90m-> null[0m[0m
+          [31m-[0m[0m cpu_shares      = 0 [90m-> null[0m[0m
+          [31m-[0m[0m dockerfile      = "Dockerfile" [90m-> null[0m[0m
+          [31m-[0m[0m extra_hosts     = [] [90m-> null[0m[0m
+          [31m-[0m[0m force_remove    = false [90m-> null[0m[0m
+          [31m-[0m[0m label           = {} [90m-> null[0m[0m
+          [31m-[0m[0m labels          = {} [90m-> null[0m[0m
+          [31m-[0m[0m memory          = 0 [90m-> null[0m[0m
+          [31m-[0m[0m memory_swap     = 0 [90m-> null[0m[0m
+          [31m-[0m[0m no_cache        = false [90m-> null[0m[0m
+          [31m-[0m[0m pull_parent     = false [90m-> null[0m[0m
+          [31m-[0m[0m remove          = true [90m-> null[0m[0m
+          [31m-[0m[0m security_opt    = [] [90m-> null[0m[0m
+          [31m-[0m[0m shm_size        = 0 [90m-> null[0m[0m
+          [31m-[0m[0m squash          = false [90m-> null[0m[0m
+          [31m-[0m[0m suppress_output = false [90m-> null[0m[0m
+          [31m-[0m[0m tag             = [] [90m-> null[0m[0m
+            [90m# (13 unchanged attributes hidden)[0m[0m
+        }
+    }
+
+[1m  # module.app["zygk-nginx"].docker_container.app_container[0m will be [1m[31mdestroyed[0m
+  # (because module.app["zygk-nginx"] is not in configuration)
+[0m  [31m-[0m[0m resource "docker_container" "app_container" {
+      [31m-[0m[0m attach                                      = false [90m-> null[0m[0m
+      [31m-[0m[0m command                                     = [
+          [31m-[0m[0m "nginx",
+          [31m-[0m[0m "-g",
+          [31m-[0m[0m "daemon off;",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m container_read_refresh_timeout_milliseconds = 15000 [90m-> null[0m[0m
+      [31m-[0m[0m cpu_shares                                  = 0 [90m-> null[0m[0m
+      [31m-[0m[0m dns                                         = [] [90m-> null[0m[0m
+      [31m-[0m[0m dns_opts                                    = [] [90m-> null[0m[0m
+      [31m-[0m[0m dns_search                                  = [] [90m-> null[0m[0m
+      [31m-[0m[0m entrypoint                                  = [
+          [31m-[0m[0m "/docker-entrypoint.sh",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m env                                         = [] [90m-> null[0m[0m
+      [31m-[0m[0m group_add                                   = [] [90m-> null[0m[0m
+      [31m-[0m[0m hostname                                    = "7b5512555876" [90m-> null[0m[0m
+      [31m-[0m[0m id                                          = "7b551255587661e4b353ca918b331042f257ac5c091998a734bd0d53655298d9" [90m-> null[0m[0m
+      [31m-[0m[0m image                                       = "sha256:96360f04937bd604cd8c97a971a948a21bfdab5b06f4a5d347d6df9ecced14b8" [90m-> null[0m[0m
+      [31m-[0m[0m init                                        = false [90m-> null[0m[0m
+      [31m-[0m[0m ipc_mode                                    = "private" [90m-> null[0m[0m
+      [31m-[0m[0m log_driver                                  = "json-file" [90m-> null[0m[0m
+      [31m-[0m[0m log_opts                                    = {} [90m-> null[0m[0m
+      [31m-[0m[0m logs                                        = false [90m-> null[0m[0m
+      [31m-[0m[0m max_retry_count                             = 0 [90m-> null[0m[0m
+      [31m-[0m[0m memory                                      = 0 [90m-> null[0m[0m
+      [31m-[0m[0m memory_swap                                 = 0 [90m-> null[0m[0m
+      [31m-[0m[0m must_run                                    = true [90m-> null[0m[0m
+      [31m-[0m[0m name                                        = "zygk-nginx-0.0.4" [90m-> null[0m[0m
+      [31m-[0m[0m network_data                                = [
+          [31m-[0m[0m {
+              [31m-[0m[0m gateway                   = "172.17.0.1"
+              [31m-[0m[0m global_ipv6_prefix_length = 0
+              [31m-[0m[0m ip_address                = "172.17.0.2"
+              [31m-[0m[0m ip_prefix_length          = 16
+              [31m-[0m[0m mac_address               = "e2:da:88:25:12:4b"
+              [31m-[0m[0m network_name              = "bridge"
+                [90m# (2 unchanged attributes hidden)[0m[0m
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m network_mode                                = "bridge" [90m-> null[0m[0m
+      [31m-[0m[0m privileged                                  = false [90m-> null[0m[0m
+      [31m-[0m[0m publish_all_ports                           = false [90m-> null[0m[0m
+      [31m-[0m[0m read_only                                   = false [90m-> null[0m[0m
+      [31m-[0m[0m remove_volumes                              = true [90m-> null[0m[0m
+      [31m-[0m[0m restart                                     = "always" [90m-> null[0m[0m
+      [31m-[0m[0m rm                                          = false [90m-> null[0m[0m
+      [31m-[0m[0m runtime                                     = "runc" [90m-> null[0m[0m
+      [31m-[0m[0m security_opts                               = [] [90m-> null[0m[0m
+      [31m-[0m[0m shm_size                                    = 64 [90m-> null[0m[0m
+      [31m-[0m[0m start                                       = true [90m-> null[0m[0m
+      [31m-[0m[0m stdin_open                                  = false [90m-> null[0m[0m
+      [31m-[0m[0m stop_signal                                 = "SIGQUIT" [90m-> null[0m[0m
+      [31m-[0m[0m stop_timeout                                = 0 [90m-> null[0m[0m
+      [31m-[0m[0m storage_opts                                = {} [90m-> null[0m[0m
+      [31m-[0m[0m sysctls                                     = {} [90m-> null[0m[0m
+      [31m-[0m[0m tmpfs                                       = {} [90m-> null[0m[0m
+      [31m-[0m[0m tty                                         = false [90m-> null[0m[0m
+      [31m-[0m[0m wait                                        = false [90m-> null[0m[0m
+      [31m-[0m[0m wait_timeout                                = 60 [90m-> null[0m[0m
+        [90m# (7 unchanged attributes hidden)[0m[0m
+
+      [31m-[0m[0m ports {
+          [31m-[0m[0m external = 18089 [90m-> null[0m[0m
+          [31m-[0m[0m internal = 18089 [90m-> null[0m[0m
+          [31m-[0m[0m ip       = "0.0.0.0" [90m-> null[0m[0m
+          [31m-[0m[0m protocol = "tcp" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m volumes {
+          [31m-[0m[0m container_path = "/app/logs" [90m-> null[0m[0m
+          [31m-[0m[0m host_path      = "/home/zygk/terraform/app/logs/zygk-nginx" [90m-> null[0m[0m
+          [31m-[0m[0m read_only      = false [90m-> null[0m[0m
+            [90m# (2 unchanged attributes hidden)[0m[0m
+        }
+    }
+
+[1m  # module.app["zygk-nginx"].docker_image.app_image[0m will be [1m[31mdestroyed[0m
+  # (because module.app["zygk-nginx"] is not in configuration)
+[0m  [31m-[0m[0m resource "docker_image" "app_image" {
+      [31m-[0m[0m id           = "sha256:96360f04937bd604cd8c97a971a948a21bfdab5b06f4a5d347d6df9ecced14b8zygk-nginx:0.0.4" [90m-> null[0m[0m
+      [31m-[0m[0m image_id     = "sha256:96360f04937bd604cd8c97a971a948a21bfdab5b06f4a5d347d6df9ecced14b8" [90m-> null[0m[0m
+      [31m-[0m[0m keep_locally = true [90m-> null[0m[0m
+      [31m-[0m[0m name         = "zygk-nginx:0.0.4" [90m-> null[0m[0m
+      [31m-[0m[0m repo_digest  = "zygk-nginx@sha256:96360f04937bd604cd8c97a971a948a21bfdab5b06f4a5d347d6df9ecced14b8" [90m-> null[0m[0m
+      [31m-[0m[0m triggers     = {
+          [31m-[0m[0m "build_version" = "0.0.4"
+        } [90m-> null[0m[0m
+
+      [31m-[0m[0m build {
+          [31m-[0m[0m build_args      = {} [90m-> null[0m[0m
+          [31m-[0m[0m cache_from      = [] [90m-> null[0m[0m
+          [31m-[0m[0m context         = "./app/zygk-nginx" [90m-> null[0m[0m
+          [31m-[0m[0m cpu_period      = 0 [90m-> null[0m[0m
+          [31m-[0m[0m cpu_quota       = 0 [90m-> null[0m[0m
+          [31m-[0m[0m cpu_shares      = 0 [90m-> null[0m[0m
+          [31m-[0m[0m dockerfile      = "Dockerfile" [90m-> null[0m[0m
+          [31m-[0m[0m extra_hosts     = [] [90m-> null[0m[0m
+          [31m-[0m[0m force_remove    = false [90m-> null[0m[0m
+          [31m-[0m[0m label           = {} [90m-> null[0m[0m
+          [31m-[0m[0m labels          = {} [90m-> null[0m[0m
+          [31m-[0m[0m memory          = 0 [90m-> null[0m[0m
+          [31m-[0m[0m memory_swap     = 0 [90m-> null[0m[0m
+          [31m-[0m[0m no_cache        = false [90m-> null[0m[0m
+          [31m-[0m[0m pull_parent     = false [90m-> null[0m[0m
+          [31m-[0m[0m remove          = true [90m-> null[0m[0m
+          [31m-[0m[0m security_opt    = [] [90m-> null[0m[0m
+          [31m-[0m[0m shm_size        = 0 [90m-> null[0m[0m
+          [31m-[0m[0m squash          = false [90m-> null[0m[0m
+          [31m-[0m[0m suppress_output = false [90m-> null[0m[0m
+          [31m-[0m[0m tag             = [] [90m-> null[0m[0m
+            [90m# (13 unchanged attributes hidden)[0m[0m
+        }
+    }
+
+[1mPlan:[0m [0m0 to add, 0 to change, 4 to destroy.
+[0m[1mmodule.app["zygk-nginx"].docker_container.app_container: Destroying... [id=7b551255587661e4b353ca918b331042f257ac5c091998a734bd0d53655298d9][0m[0m
+[0m[1mmodule.app["zygk-basic-management"].docker_container.app_container: Destroying... [id=770e7493a82614fb07445df10ce3f73b0d4a3853b2571065f910cb7a7bd72c80][0m[0m
+[0m[1mmodule.app["zygk-nginx"].docker_container.app_container: Destruction complete after 0s[0m
+[0m[1mmodule.app["zygk-nginx"].docker_image.app_image: Destroying... [id=sha256:96360f04937bd604cd8c97a971a948a21bfdab5b06f4a5d347d6df9ecced14b8zygk-nginx:0.0.4][0m[0m
+[0m[1mmodule.app["zygk-nginx"].docker_image.app_image: Destruction complete after 0s[0m
+[0m[1mmodule.app["zygk-basic-management"].docker_container.app_container: Destruction complete after 0s[0m
+[0m[1mmodule.app["zygk-basic-management"].docker_image.app_image: Destroying... [id=sha256:716bf41f468cc51d2683819f234e5ebabf38839b31688351f878a177e5f30a38zygk-basic-management:0.0.7][0m[0m
+[0m[1mmodule.app["zygk-basic-management"].docker_image.app_image: Destruction complete after 0s[0m
+[0m[1m[32m
+Apply complete! Resources: 0 added, 0 changed, 4 destroyed.[0m
+2025-11-28 07:35:33 - Initial terraform apply finished.
+2025-11-28 07:36:33 - Detected change in /home/zygk/terraform/app/configs.json. Old hash: 4394741ac62476043404e25c5917a200f59bb94f78ef5375038d6a6de8d1d48b, New hash: 19e446621c5a93d33bca21ddfda26290e02f679a72d96a0d176b9d2a6cb88e94
+2025-11-28 07:36:33 - Running terraform apply...
+[0m[1mmodule.app["zygk-external-system"].docker_image.app_image: Refreshing state... [id=sha256:103dc2a7d2c1bb3da0e6f5171ae2b57ed3cd02d36741a7adb2e028bebf48415dzygk-external-system:0.0.6][0m
+[0m[1mmodule.app["zygk-external-system"].docker_container.app_container: Refreshing state... [id=75d2492aaad1ed96514e341d7a3b9ccfcb81776bd160e25ff498a5039ab5b3d5][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create[0m
+
+Terraform will perform the following actions:
+
+[1m  # module.app["zygk-basic-management"].docker_container.app_container[0m will be created
+[0m  [32m+[0m[0m resource "docker_container" "app_container" {
+      [32m+[0m[0m attach                                      = false
+      [32m+[0m[0m bridge                                      = (known after apply)
+      [32m+[0m[0m command                                     = (known after apply)
+      [32m+[0m[0m container_logs                              = (known after apply)
+      [32m+[0m[0m container_read_refresh_timeout_milliseconds = 15000
+      [32m+[0m[0m entrypoint                                  = (known after apply)
+      [32m+[0m[0m env                                         = (known after apply)
+      [32m+[0m[0m exit_code                                   = (known after apply)
+      [32m+[0m[0m hostname                                    = (known after apply)
+      [32m+[0m[0m id                                          = (known after apply)
+      [32m+[0m[0m image                                       = (known after apply)
+      [32m+[0m[0m init                                        = (known after apply)
+      [32m+[0m[0m ipc_mode                                    = (known after apply)
+      [32m+[0m[0m log_driver                                  = (known after apply)
+      [32m+[0m[0m logs                                        = false
+      [32m+[0m[0m must_run                                    = true
+      [32m+[0m[0m name                                        = "zygk-basic-management-0.0.7"
+      [32m+[0m[0m network_data                                = (known after apply)
+      [32m+[0m[0m network_mode                                = "bridge"
+      [32m+[0m[0m read_only                                   = false
+      [32m+[0m[0m remove_volumes                              = true
+      [32m+[0m[0m restart                                     = "always"
+      [32m+[0m[0m rm                                          = false
+      [32m+[0m[0m runtime                                     = (known after apply)
+      [32m+[0m[0m security_opts                               = (known after apply)
+      [32m+[0m[0m shm_size                                    = (known after apply)
+      [32m+[0m[0m start                                       = true
+      [32m+[0m[0m stdin_open                                  = false
+      [32m+[0m[0m stop_signal                                 = (known after apply)
+      [32m+[0m[0m stop_timeout                                = (known after apply)
+      [32m+[0m[0m tty                                         = false
+      [32m+[0m[0m wait                                        = false
+      [32m+[0m[0m wait_timeout                                = 60
+
+      [32m+[0m[0m healthcheck (known after apply)
+
+      [32m+[0m[0m labels (known after apply)
+
+      [32m+[0m[0m ports {
+          [32m+[0m[0m external = 19510
+          [32m+[0m[0m internal = 19510
+          [32m+[0m[0m ip       = "0.0.0.0"
+          [32m+[0m[0m protocol = "tcp"
+        }
+
+      [32m+[0m[0m volumes {
+          [32m+[0m[0m container_path = "/app/logs"
+          [32m+[0m[0m host_path      = "/home/zygk/terraform/app/logs/zygk-basic-management"
+            [90m# (2 unchanged attributes hidden)[0m[0m
+        }
+    }
+
+[1m  # module.app["zygk-basic-management"].docker_image.app_image[0m will be created
+[0m  [32m+[0m[0m resource "docker_image" "app_image" {
+      [32m+[0m[0m id           = (known after apply)
+      [32m+[0m[0m image_id     = (known after apply)
+      [32m+[0m[0m keep_locally = true
+      [32m+[0m[0m name         = "zygk-basic-management:0.0.7"
+      [32m+[0m[0m repo_digest  = (known after apply)
+      [32m+[0m[0m triggers     = {
+          [32m+[0m[0m "build_version" = "0.0.7"
+        }
+
+      [32m+[0m[0m build {
+          [32m+[0m[0m cache_from     = []
+          [32m+[0m[0m context        = "./app/zygk-basic-management"
+          [32m+[0m[0m dockerfile     = "Dockerfile"
+          [32m+[0m[0m extra_hosts    = []
+          [32m+[0m[0m remove         = true
+          [32m+[0m[0m security_opt   = []
+          [32m+[0m[0m tag            = []
+            [90m# (13 unchanged attributes hidden)[0m[0m
+        }
+    }
+
+[1m  # module.app["zygk-nginx"].docker_container.app_container[0m will be created
+[0m  [32m+[0m[0m resource "docker_container" "app_container" {
+      [32m+[0m[0m attach                                      = false
+      [32m+[0m[0m bridge                                      = (known after apply)
+      [32m+[0m[0m command                                     = (known after apply)
+      [32m+[0m[0m container_logs                              = (known after apply)
+      [32m+[0m[0m container_read_refresh_timeout_milliseconds = 15000
+      [32m+[0m[0m entrypoint                                  = (known after apply)
+      [32m+[0m[0m env                                         = (known after apply)
+      [32m+[0m[0m exit_code                                   = (known after apply)
+      [32m+[0m[0m hostname                                    = (known after apply)
+      [32m+[0m[0m id                                          = (known after apply)
+      [32m+[0m[0m image                                       = (known after apply)
+      [32m+[0m[0m init                                        = (known after apply)
+      [32m+[0m[0m ipc_mode                                    = (known after apply)
+      [32m+[0m[0m log_driver                                  = (known after apply)
+      [32m+[0m[0m logs                                        = false
+      [32m+[0m[0m must_run                                    = true
+      [32m+[0m[0m name                                        = "zygk-nginx-0.0.4"
+      [32m+[0m[0m network_data                                = (known after apply)
+      [32m+[0m[0m network_mode                                = "bridge"
+      [32m+[0m[0m read_only                                   = false
+      [32m+[0m[0m remove_volumes                              = true
+      [32m+[0m[0m restart                                     = "always"
+      [32m+[0m[0m rm                                          = false
+      [32m+[0m[0m runtime                                     = (known after apply)
+      [32m+[0m[0m security_opts                               = (known after apply)
+      [32m+[0m[0m shm_size                                    = (known after apply)
+      [32m+[0m[0m start                                       = true
+      [32m+[0m[0m stdin_open                                  = false
+      [32m+[0m[0m stop_signal                                 = (known after apply)
+      [32m+[0m[0m stop_timeout                                = (known after apply)
+      [32m+[0m[0m tty                                         = false
+      [32m+[0m[0m wait                                        = false
+      [32m+[0m[0m wait_timeout                                = 60
+
+      [32m+[0m[0m healthcheck (known after apply)
+
+      [32m+[0m[0m labels (known after apply)
+
+      [32m+[0m[0m ports {
+          [32m+[0m[0m external = 18089
+          [32m+[0m[0m internal = 18089
+          [32m+[0m[0m ip       = "0.0.0.0"
+          [32m+[0m[0m protocol = "tcp"
+        }
+
+      [32m+[0m[0m volumes {
+          [32m+[0m[0m container_path = "/app/logs"
+          [32m+[0m[0m host_path      = "/home/zygk/terraform/app/logs/zygk-nginx"
+            [90m# (2 unchanged attributes hidden)[0m[0m
+        }
+    }
+
+[1m  # module.app["zygk-nginx"].docker_image.app_image[0m will be created
+[0m  [32m+[0m[0m resource "docker_image" "app_image" {
+      [32m+[0m[0m id           = (known after apply)
+      [32m+[0m[0m image_id     = (known after apply)
+      [32m+[0m[0m keep_locally = true
+      [32m+[0m[0m name         = "zygk-nginx:0.0.4"
+      [32m+[0m[0m repo_digest  = (known after apply)
+      [32m+[0m[0m triggers     = {
+          [32m+[0m[0m "build_version" = "0.0.4"
+        }
+
+      [32m+[0m[0m build {
+          [32m+[0m[0m cache_from     = []
+          [32m+[0m[0m context        = "./app/zygk-nginx"
+          [32m+[0m[0m dockerfile     = "Dockerfile"
+          [32m+[0m[0m extra_hosts    = []
+          [32m+[0m[0m remove         = true
+          [32m+[0m[0m security_opt   = []
+          [32m+[0m[0m tag            = []
+            [90m# (13 unchanged attributes hidden)[0m[0m
+        }
+    }
+
+[1mPlan:[0m [0m4 to add, 0 to change, 0 to destroy.
+[0m[1mmodule.app["zygk-nginx"].docker_image.app_image: Creating...[0m[0m
+[0m[1mmodule.app["zygk-basic-management"].docker_image.app_image: Creating...[0m[0m
+[0m[1mmodule.app["zygk-nginx"].docker_image.app_image: Still creating... [00m10s elapsed][0m[0m
+[0m[1mmodule.app["zygk-basic-management"].docker_image.app_image: Still creating... [00m10s elapsed][0m[0m
+[0m[1mmodule.app["zygk-nginx"].docker_image.app_image: Creation complete after 15s [id=sha256:96360f04937bd604cd8c97a971a948a21bfdab5b06f4a5d347d6df9ecced14b8zygk-nginx:0.0.4][0m
+[0m[1mmodule.app["zygk-basic-management"].docker_image.app_image: Still creating... [00m20s elapsed][0m[0m
+[0m[1mmodule.app["zygk-basic-management"].docker_image.app_image: Creation complete after 26s [id=sha256:716bf41f468cc51d2683819f234e5ebabf38839b31688351f878a177e5f30a38zygk-basic-management:0.0.7][0m
+[0m[1mmodule.app["zygk-basic-management"].docker_container.app_container: Creating...[0m[0m
+[0m[1mmodule.app["zygk-nginx"].docker_container.app_container: Creating...[0m[0m
+[0m[1mmodule.app["zygk-basic-management"].docker_container.app_container: Creation complete after 1s [id=543aaa6cb1d5857519335f310dd870f722994f8a80285490ebc38fe14453bc5d][0m
+[0m[1mmodule.app["zygk-nginx"].docker_container.app_container: Creation complete after 1s [id=749c73e94adf5cf3979209c0c68a2a56bcad878347eefdc22c2cc71255d51fda][0m
+[0m[1m[32m
+Apply complete! Resources: 4 added, 0 changed, 0 destroyed.[0m
+2025-11-28 07:37:00 - terraform apply finished.
